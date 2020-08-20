@@ -1,0 +1,24 @@
+
+@media(max-width: 768px) {
+    .showcase-wrapper {
+        background: linear-gradient(178.91deg, #124B88 4.2%, rgba(255, 255, 255, 0) 263.55%, rgba(18, 75, 136, 0.5) 263.55%), url('../../assets/showcase_img_2.jpg');
+        /* background-size: cover;
+        background-position: -50% -50%; */
+    }
+}
+
+.showcase-wrapper {
+    background: linear-gradient(178.91deg, #124B88 4.2%, rgba(255, 255, 255, 0) 263.55%, rgba(18, 75, 136, 0.5) 263.55%), url('../../assets/img/showcase_img_1.jpg');
+    background-repeat: no-repeat;
+    background-size: fit;
+
+};
+
+
+
+@media (min-width: 1280px) { 
+.showcase-wrapper {
+    background-size: cover;
+    background-position: center;
+}
+}

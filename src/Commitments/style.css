@@ -1,0 +1,23 @@
+.commitmentList {
+    background-color: rgba(100, 182, 99, 0.07);
+}
+
+.commitmentList:hover {
+    background: rgba(234, 193, 0, 0.24);
+};
+
+.status-wrapper  {
+    height: 10px;
+    width: 80%;
+    /* Status bar bg Color */
+    background: rgba(229, 229, 229, 0.36);
+    /* Inner Shadow for status bar */
+    box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.22);
+    border-radius: 20px;
+    position: relative;
+}
+
+.commitmentListItems {
+    list-style-image: url('../assets/icons/Ellipse.svg');
+    list-style-position: inside;
+}
