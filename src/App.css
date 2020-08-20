@@ -11,10 +11,10 @@ body {
   color: white !important;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: none !important;
   color: #f1c40f !important;
-}
+} */
 
 .no-overflow {
   overflow: hidden !important;
@@ -29,9 +29,9 @@ a:hover {
   background-color: #FAF9F9;
 }
 
-a {
+/* a {
   color: rgba(118, 110, 110, 0.45) !important;
-}
+} */
 
 .capitalize {
   text-transform: uppercase;

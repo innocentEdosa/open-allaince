@@ -1,6 +1,6 @@
 const routes = {
     home: '/v2',
-    about: '/about',
+    about: '/about/main',
     nap1: '/commitments/nap1',
     nap2: '/commitments/nap2',
     commitments: '/commitments/:nap',

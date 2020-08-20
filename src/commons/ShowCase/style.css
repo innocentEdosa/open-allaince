@@ -1,7 +1,7 @@
 
 @media(max-width: 768px) {
     .showcase-wrapper {
-        background: linear-gradient(178.91deg, #124B88 4.2%, rgba(255, 255, 255, 0) 263.55%, rgba(18, 75, 136, 0.5) 263.55%), url('../../assets/showcase_img_2.jpg');
+        background: linear-gradient(178.91deg, #124B88 4.2%, rgba(255, 255, 255, 0) 263.55%, rgba(18, 75, 136, 0.5) 263.55%), url('../../assets/showcase_img_2.jpg') cover no-repeat -50px;
         /* background-size: cover;
         background-position: -50% -50%; */
     }

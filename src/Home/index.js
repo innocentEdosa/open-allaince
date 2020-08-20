@@ -14,10 +14,10 @@ const Home = () => {
             <Showcase/>
             <PostShowcase />
             <ThematicShowArea />
-          <NewsLetter />
-            <Analytics />
-            <Story />
-            <Footer /> 
+          {/* <NewsLetter /> */}
+            {/* <Analytics /> */}
+            {/* <Story /> */}
+            {/* <Footer />  */}
         </div>
     );
 }

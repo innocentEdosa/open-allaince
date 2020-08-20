@@ -1,47 +1,51 @@
 import { ReactComponent as ChevronDown } from '../../assets/icons/chevron_down.svg';
+import { ReactComponent as ChevronUp} from '../../assets/icons/arrow_up.svg';
+
 import React from 'react';
 import routes from '../../utilities/routes';
 
 const navList = [
   {
-    title: "about us",
+    title: "About us",
     isDropdown: false,
     path: routes.about,
   },
   {
-    title: "national action plans",
+    title: "National Action Plans",
     isDropdown: true,
     path: "",
     icon: <ChevronDown />,
+    icon2: <ChevronUp />,
     dropdown: [{
-        title: 'nap 1',
+        title: 'NAP 1',
         path: routes.nap1,
     },
     {
-        title: 'nap 2',
+        title: 'NAP 2',
         path: routes.nap2,
     }]
   },
   {
-    title: "blog",
+    title: "Blog",
     isDropdown: false,
     path: routes.blog,
   },
   {
-    title: "resources",
+    title: "Resources",
     isDropdown: true,
     path: "",
     icon: <ChevronDown />,
+    icon2: <ChevronUp />,
     dropdown: [{
-        title: 'document',
+        title: 'Document',
         path: routes.document,
     },
     {
-        title: 'external link',
+        title: 'External Links',
         path: routes.external
     },
     {
-        title: 'gallery',
+        title: 'Gallery',
         path: routes.gallery,
 
     }]
