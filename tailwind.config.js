@@ -71,7 +71,18 @@ module.exports = {
       widest: ".1em",
       open: "0.03em",
     },
+    screens: {
+      xs: '200px',
+      'sm': '640px',
+
+    'md': '768px',
+
+    'lg': '1024px',
+
+    'xl': '1280px',
+    },
     extend: {
+
       spacing: {
         88: "5.5rem",
         28: "1.75rem",
@@ -108,6 +119,8 @@ module.exports = {
         129: '8.0625rem',
         56: '3.5rem',
         72: '4.5rem',
+        946: '59.125rem',
+        52: '3.25rem',
       },
       fontSize: {
         60: '3.75rem',

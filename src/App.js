@@ -126,10 +126,17 @@ const siteRoutes = [
 class App extends Component {
 
 componentDidMount() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  this.handleVh();
+  window.addEventListener('resize', this.handleVh)
+}
+
+componentWillUnmount(){
+  window.removeEventListener('resize', this.handleVh)
 }
   
+handleVh = () => {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
   render() {
 
     const ScrollToTop = () => {

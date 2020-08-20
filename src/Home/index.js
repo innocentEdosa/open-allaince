@@ -10,11 +10,11 @@ import PostShowcase from '../commons/PostShowcase';
 
 const Home = () => {
     return (
-        <div className="mainSection bg-shade-pink ">
+        <div className="mainSection bg-shade-background ">
             <Showcase/>
             <PostShowcase />
             <ThematicShowArea />
-          {/* <NewsLetter /> */}
+          <NewsLetter />
             {/* <Analytics /> */}
             {/* <Story /> */}
             {/* <Footer />  */}
