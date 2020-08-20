@@ -15,7 +15,7 @@ const Home = () => {
             <PostShowcase />
             <ThematicShowArea />
           <NewsLetter />
-            {/* <Analytics /> */}
+            <Analytics />
             {/* <Story /> */}
             {/* <Footer />  */}
         </div>
