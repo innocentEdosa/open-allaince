@@ -1,18 +1,22 @@
 import React from "react";
-import PrimaryButton from "../Button/PrimaryButton";
+import { Link } from 'react-router-dom'
 import footerNavList from './footerNavList';
 
 const FooterNav = () => {
   const listItemClass =
-    "mb-6 lg:mb-0 last:mb-0 mx-28 font-sans font-bold text-2xl lg:text-base text-text-dark tracking-open flex items-center text-lg cursor-pointer";
+    "xs:mb-6 lg:mb-0 last:mb-0 mx-28 font-sans font-bold text-2xl lg:text-base text-text-dark tracking-open flex items-center text-lg cursor-pointer";
 
   return (
     <nav className="flex items-center">
       <ul className="flex-grow flex flex-col lg:flex-row items-center justify-center">
-        {footerNavList.map(({ title}) => {
+        {footerNavList.map(({ title, path}) => {
           return (
+            
+            
             <li key={title} className={listItemClass}>
-              <h6>{title}</h6>
+             <Link to={path}>
+              <h6 className="text-text-dark hover:text-accent-gold">{title}</h6>
+             </Link>
             </li>
           );
         })}

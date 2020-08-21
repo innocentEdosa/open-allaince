@@ -3,10 +3,12 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thematic from './thematicStore/reducer';
 import commitment from './commitments/reducer';
+import blog from './Blog/reducer';
 
 const rootReducer = combineReducers({
   thematic,
   commitment,
+  blog,
 });
 
 const configureStore = () => {

@@ -16,7 +16,7 @@ const Home = () => {
             <ThematicShowArea />
           <NewsLetter />
             <Analytics />
-            {/* <Story /> */}
+            <Story />
             {/* <Footer />  */}
         </div>
     );
