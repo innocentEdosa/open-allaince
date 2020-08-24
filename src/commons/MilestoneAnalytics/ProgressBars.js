@@ -8,6 +8,7 @@ import { easeQuadInOut } from "d3-ease";
 import AnimatedProgressProvider from './AnimatedProgress';
 
  const ProgressBar = ({
+     valueEnd = 0,
      children,
      pathStroke,
      className,
@@ -18,7 +19,7 @@ import AnimatedProgressProvider from './AnimatedProgress';
     <div className={className}>
               <AnimatedProgressProvider
         valueStart={0}
-        valueEnd={66}
+        valueEnd={valueEnd}
         duration={1}
         easingFunction={easeQuadInOut}
       >

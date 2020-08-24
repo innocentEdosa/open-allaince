@@ -6,8 +6,12 @@ import {
   FETCH_COMMITMENT_MILESTONE,
   FETCH_COMMITMENT_MILESTONE_FAILED,
   FETCH_COMMITMENT_MILESTONE_SUCCESS,
+
+  FETCH_MILESTONE_LIST,
+  FETCH_MILESTONE_LIST_FAILED,
+  FETCH_MILESTONE_LIST_SUCCESS,
 } from "./type";
-import { fetchSingleCommitment, fetchSingleCommitmentMilestoneService } from "./api";
+import { fetchMilestoneListService, fetchSingleCommitment, fetchSingleCommitmentMilestoneService } from "./api";
 
 export const fetchSingleCommitmentAction = ({ id, category, nap }) => async (
   dispatch,
@@ -46,4 +50,16 @@ export const fetchSingleCommitmentMilestoneAction = (id) => async (dispatch) => 
     } catch (error) {
         dispatch({type: FETCH_COMMITMENT_MILESTONE_FAILED})
     }
+}
+
+export const fetchMilestoneListAction = () => async (dispatch) => {
+  dispatch({type: FETCH_MILESTONE_LIST});
+  try {
+    const {data: {
+      data
+    }} = await fetchMilestoneListService(); 
+    dispatch({type: FETCH_MILESTONE_LIST_SUCCESS, milestones: data})
+  } catch (error) {
+    dispatch({type: FETCH_COMMITMENT_MILESTONE_FAILED})
+  }
 }

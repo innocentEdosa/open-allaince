@@ -9,3 +9,8 @@ export const fetchSingleCommitmentMilestoneService = (id) => createApiService({
     method: 'get',
     endpoint: `/commitment/${id}/milestones`,
 });
+
+export const fetchMilestoneListService = createApiService({
+    method: 'get',
+    endpoint: 'milestones/list',
+});
