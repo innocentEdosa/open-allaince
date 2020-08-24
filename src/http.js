@@ -6,6 +6,7 @@ const createApiService = ({
   const API_BASE_URL = priority || 'https://api.openalliance.ng/api';
   const axiosInstance = axios.create({
     baseURL: API_BASE_URL,
+
   });
   switch (method) {
     case 'post':

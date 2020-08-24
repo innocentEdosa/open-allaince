@@ -51,4 +51,15 @@ const thematicList = [
     },
 ];
 
+export const commitmentCardList = [
+    {
+        title: 'Commitment 1',
+        description: 'To Ensure More Effective Citizens’ Participation Across The Entire Budget Cycle.'
+    },
+    {
+        title: 'Commitment 6',
+        description: 'To Establish A Public Central Register Of Beneficial Owners Of Companies.'
+    }
+]
+
 export default thematicList;

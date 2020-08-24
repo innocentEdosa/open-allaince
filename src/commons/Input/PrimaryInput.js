@@ -1,10 +1,11 @@
 import React from "react";
 
-const PrimaryInput = ({ onChange, name, placeholder, label, type, required, value }) => {
+const PrimaryInput = ({ disabled, onChange, name, placeholder, label, type = "text", required, value }) => {
   return (
     <label className="w-full h-full m-0" htmlFor={name}>
       {label}
       <input
+      disabled={disabled}
       value={value}
       onChange={onChange}
         type={type}

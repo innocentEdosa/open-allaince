@@ -5,6 +5,7 @@ const routes = {
     nap2: '/commitments/nap2',
     commitments: '/commitments/:nap',
     blog: '/blog',
+    blogDetails: '/blog-details',
     signup: '/register',
     document: '/documents/main',
     external: '/external',

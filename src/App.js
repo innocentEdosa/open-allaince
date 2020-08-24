@@ -19,6 +19,7 @@ import TopNav from './commons/TopNav';
 import SingleCommitment from './Commitments/singleCommitment/Commitment';
 import Join from './JoinUs';
 import Footer from './commons/Footer';
+import NewBlog from './Blog';
 
 
 const siteRoutes = [
@@ -42,11 +43,11 @@ const siteRoutes = [
     exact: true,
     main: () => <Redirect to="/documents/main" />,
   },
-  {
-    path: '/blog/',
-    exact: true,
-    main: () => <Redirect to="/blog/main" />,
-  },
+  // {
+  //   path: '/blog/',
+  //   exact: true,
+  //   main: () => <Redirect to="/blog/main" />,
+  // },
   {
     path: '/blog-details/',
     exact: true,
@@ -192,7 +193,7 @@ handleVh = () => {
               <Route path={routes.commitments} component={CommitmentContainer} />
               <Route path={routes.singleCommitment} component={SingleCommitment} />
               <Route path={routes.joinUs} component={Join} />
-             
+             <Route path={routes.blog} component={NewBlog} />
               {/* <Route exact path="/login" component={LoginPage} /> */}
               {/* <Route path="/" component={Home} /> */}
               {/* <Route exact path="/reset-password" component={ResetPasswordPage} />

@@ -1,0 +1,25 @@
+
+
+@media (min-width: 1024px) { 
+    .blogList-wrapper > * {
+        margin-right: 1.875rem;
+        }
+    .blogList-wrapper :nth-child(2n){
+        margin-right: 0rem;
+        }
+ }
+@media (min-width: 1194px) { 
+    .blogList-wrapper > * {
+        margin-right: 1.875rem;
+        }
+        .blogList-wrapper :nth-child(2n){
+            margin-right: 1.875rem;
+            }
+    .blogList-wrapper :nth-child(3n){
+        margin-right: 0rem;
+        }
+ }
+
+ .skeleton-wrapper > span{
+width: 100%
+ }

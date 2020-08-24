@@ -54,6 +54,7 @@ module.exports = {
         guava: '#667766',
         purple: '#0F117A',
         lemon: '#64B663',
+        notSoDark: '#051628',
       },
     },
     fontFamily: {
@@ -72,7 +73,7 @@ module.exports = {
       open: "0.03em",
     },
     screens: {
-      xs: '200px',
+      xs: '0px',
       'sm': '640px',
 
     'md': '768px',
@@ -119,6 +120,11 @@ module.exports = {
         72: '4.5rem',
         946: '59.125rem',
         52: '3.25rem',
+        168: '10.5rem',
+        198: '12.375rem',
+        460: '28.75rem',
+        343: '21.4375rem',
+        210: '13.125rem'
       },
       fontSize: {
         60: '3.75rem',

@@ -10,13 +10,13 @@ import routes from "../../utilities/routes";
 import { Collapse } from "reactstrap";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close_menu.svg";
 
-const mobileListItemClass = 'cursor-pointer h-72 flex items-center px-4 text-text-dark hover:text-accent-gold';
+const mobileListItemClass = 'cursor-pointer h-72 flex items-center px-4 text-text-dark';
 
 const activeMobileListItemClass = `cursor-pointer h-72 flex items-center px-4  hover:text-accent-gold text-accent-gold`
 
 const NavDropDown = ({ pathname, style, close, data = [] }) => {
 
-  const listClass = 'h-45 flex items-center px-4 hover:bg-shade-sky  md:text-xs text-text-dark hover:text-accent-gold lg:text-sm font-normal font-sans cursor-pointer';
+  const listClass = 'h-45 flex items-center px-4 hover:bg-shade-sky  md:text-xs text-text-notSoDark lg:text-sm font-normal font-sans cursor-pointer';
 
   const activeListClass = 'h-45 flex items-center px-4 hover:bg-shade-sky  md:text-xs text-accent-gold hover:text-accent-gold lg:text-sm font-normal font-sans cursor-pointer';
 
@@ -50,7 +50,7 @@ const MobileNavDropdown = ({ list, handleRouting, pathname }) => {
     <>
       <li
         onClick={toggleIsOpen}
-        className=" cursor-pointer h-72 flex items-center px-4 justify-between text-text-dark hover:text-accent-gold"
+        className=" cursor-pointer h-72 flex items-center px-4 justify-between   text-text-dark"
       >
         <h6 className="font-sans font-bold tracking-open text-sm ">
           {list.title}
@@ -62,7 +62,7 @@ const MobileNavDropdown = ({ list, handleRouting, pathname }) => {
           {list.dropdown.map((innerlist) => (
               <li
               onClick={() => { handleRouting(innerlist.path)}}
-              className={pathname.indexOf(innerlist.path) !== -1  ? activeMobileListItemClass : mobileListItemClass }
+              className={pathname.indexOf(innerlist.path) !== -1  ? mobileListItemClass : mobileListItemClass }
               >
                 <h6 className="font-sans font-bold tracking-open text-sm ">
                   {innerlist.title}
@@ -93,10 +93,10 @@ const TopNav = () => {
   const toggleMobileNav = () => setShowMobileNav((prev) => !prev);
 
   const listItemClass =
-    " md:mx-2 lg:mx-28 font-sans font-bold md:text-xs text-base text-text-coal tracking-open flex items-center xl:text-base cursor-pointer hover:text-accent-gold";
+    " md:mx-2 lg:mx-28 font-sans font-bold md:text-xs text-base text-text-coal text-opacity-40 tracking-open flex items-center xl:text-base cursor-pointer hover:text-opacity-100";
 
     const activeListItemClass =
-    " md:mx-2 lg:mx-28 font-sans font-bold md:text-xs text-base text-accent-gold tracking-open flex items-center xl:text-base cursor-pointer hover:text-accent-gold";
+    " md:mx-2 lg:mx-28 font-sans font-bold md:text-xs text-base text-accent-gold tracking-open flex items-center xl:text-base cursor-pointer";
 
 
 
@@ -110,13 +110,14 @@ push(path);
 setShowMobileNav(false)
   }
   return (
-    <section className="">
+    <section style={{
+      boxShadow: "0px 1px 6px rgba(0, 0, 0, 0.14)",
+    }} className="xl:px-68 xl:mx-auto xl:flex xl:justify-center">
       <nav
-        style={{
-          boxShadow: "0px 1px 6px rgba(0, 0, 0, 0.14)",
-        }}
-        className=" flex bg-shade px-6 lg:px-16 h-88 items-center"
+        
+        className=" flex bg-shade px-6 lg:px-16 h-88 items-center xl:px-0 xl:w-1146 "
       >
+
         <Link to={routes.home}>
           <div className="flex-shrink-0">
             <Logo />
@@ -174,7 +175,7 @@ setShowMobileNav(false)
                   return <MobileNavDropdown pathname={pathname} handleRouting={handleRouting} list={list} />;
                 }
                 return (
-                    <li onClick={() => handleRouting(list.path)} className={pathname.indexOf(list.path) !== -1  ? activeMobileListItemClass : mobileListItemClass }>
+                    <li onClick={() => handleRouting(list.path)} className={pathname.indexOf(list.path) !== -1  ? mobileListItemClass : mobileListItemClass }>
                       <h6 className="font-sans font-bold tracking-open text-sm ">
                         {list.title}
                       </h6>

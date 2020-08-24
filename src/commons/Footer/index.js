@@ -39,7 +39,7 @@ const Footer = () => {
           </p>
           <ul className="flex flex-col lg:flex-row items-center">
             <li className="xs:mb-4 lg:mb-0 lg:mr-4">
-              <a target="_blank" rel="noopener noreferrer"  href="http://www.osiwa.org/">
+              <a target="_blank" rel="noopener noreferrer" href="http://www.osiwa.org/">
                 <img alt="" src={osiwa}  />
               </a>{" "}
             </li>

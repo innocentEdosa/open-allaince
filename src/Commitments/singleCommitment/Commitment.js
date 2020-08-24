@@ -29,14 +29,12 @@ const SingleCommitment = ({
         })
     }, [id, category]);
 
-    const fetchingCommitmentMilestones = () => {
+    // const fetchingCommitmentMilestones = () => {
 
-    }
+    // }
 
     useEffect(() => {
-        console.log('i am fetching the milestone')
         if(activeTab === 'milestone'){
-console.log('this function should run now')
             fetchMilestones(id)
         }
     }, [id, activeTab])
@@ -93,9 +91,8 @@ console.log('this function should run now')
                   Milestones
                 </button>
               </div>
-              {(activeTab === "about" || !activeTab) &&
-                activeCommitment.about && (
-                  <AboutCommitment about={activeCommitment.about} />
+              {(activeTab === "about" || !activeTab) && (
+                  <AboutCommitment fetchingCommitment={fetchingCommitment} activeCommitment={activeCommitment} />
                 )}
               {activeTab === "milestone" && (
                 <CommitmentMilestones
@@ -107,7 +104,6 @@ console.log('this function should run now')
 <ThematicCard category={category} id={id} nap={nap} activeCommitment={activeCommitment} />
           </div>
         </div>
-        <Footer />
       </>
     );
 }
