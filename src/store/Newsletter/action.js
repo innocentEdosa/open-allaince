@@ -8,6 +8,7 @@ export const signupForNewsletterAction = (params) => async (dispatch) => {
     try {
        await signupForNewsLetterService(params);
         dispatch({type: SIGNUP_FOR_NEWSLETTER_SUCCESS})
+        return true;
     } catch (error) {
         dispatch({type: SIGNUP_FOR_NEWSLETTER_FAILED})
     }

@@ -5,9 +5,9 @@ import { fetchGalleryService } from './api';
     dispatch({type: FETCHING_GALLERY});
     try {
         const {data: {
-            images,
+        gallery,
         }} = await fetchGalleryService();
-        dispatch({type: FETCHING_GALLERY_SUCCESS, gallery: images})
+        dispatch({type: FETCHING_GALLERY_SUCCESS, gallery})
     } catch (error) {
         dispatch({type: FETCHING_GALLERY_FAILED})
     }

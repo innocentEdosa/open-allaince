@@ -4,6 +4,8 @@ import PrimaryButton from '../Button/PrimaryButton';
 import { connect } from 'react-redux';
 import { signupForNewsletterAction } from '../../store/Newsletter/action';
 import { ReactComponent as Loader } from '../../assets/loader.svg'
+import useModal from '../../HOC/useModal';
+import NewsLetterModalCard from './NewsLetterModal';
 
 const NewsLetter = ({
   signupForNewsLetter,
@@ -14,6 +16,8 @@ const NewsLetter = ({
     email: '',
   });
 
+  const {modal, openModal, closeModal } = useModal()
+
   const onChange = (e) => {
     const { name, value } = e.target;
     setFormInput((prev) => ({
@@ -22,11 +26,19 @@ const NewsLetter = ({
     }))
   }
 
-  const submitHandler = (e) => {
+
+
+  const submitHandler = async (e) => {
     e.preventDefault()
-    signupForNewsLetter(formInput)
+    const response = await signupForNewsLetter(formInput);
+    if(response){
+      openModal(<NewsLetterModalCard closeModal={closeModal} />)
+    }
+    console.log(response, 'this is the response from newsletter')
   }
   return (
+    <>
+    {modal}
     <div className="bg-primary-light  ">
       <div className="flex flex-col justify-center xs:px-4 lg:px-68 py-10 w-full xl:w-1140 xl:mx-auto xl:px-0 lg:h-270">
 
@@ -55,6 +67,7 @@ const NewsLetter = ({
       </form>
       </div>
     </div>
+    </>
   );
 };
 

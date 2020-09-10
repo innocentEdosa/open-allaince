@@ -41,6 +41,8 @@ module.exports = {
         placeholder: '#858585',
         maroon: '#26A6D1',
         skyBlue: '#3B5998',
+        wickedDark: '#000',
+        cream: '#EDEBEB',
 
 
       },
@@ -133,6 +135,10 @@ module.exports = {
         148: '9.25rem',
         232: '14.5rem',
         103: '6.4375rem',
+        669: '669px',
+        953: '953px',
+        140: '140px',
+        193: '193px',
       },
       fontSize: {
         60: '3.75rem',

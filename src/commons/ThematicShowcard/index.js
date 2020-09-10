@@ -17,10 +17,7 @@ const ThematicShowcard = ({
         O.G.P Thematic Areas
       </h6>
       <p className="text-center hidden lg:block mt-8 w-946 font-sans text-lg ">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor elementum
-        sed orci quisque molestie eu consectetur sed quam. Id faucibus sed
-        feugiat velit. Ipsum elementum, eget tortor lectus. In vitae leo laoreet
-        consequat. Turpis adipiscing urna, id vitae. Id purus donec.
+      Countries or States are peculiar from one another. Each state or country’s commitments contained in the Action Plan are built around the global OGP thematic areas.
       </p>
       {fetchingNap1 ? (
         <div className=" px-6 pt-12 flex w-full justify-center relative flex-wrap flex-no-wrap box-border">

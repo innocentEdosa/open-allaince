@@ -55,3 +55,22 @@
 .imgDetailWrapper:hover > .imgDetails {
     opacity: 1;
 }
+
+.ril__toolbarRightSide {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.ril__toolbarItem:nth-child(2) {
+    flex-grow: 1;
+}
+
+@media (min-width: 1280px) { 
+    .ril__toolbarRightSide {
+        justify-content: flex-end;
+    }
+    .ril__toolbarItem:nth-child(2) {
+        flex-grow: 0;
+    }
+}
