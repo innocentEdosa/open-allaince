@@ -1,6 +1,6 @@
 import React from 'react';
 import formatDate from '../utilities/dateFormatter';
-// import GalleryModal from './GalleryModal';
+import GalleryModal from './GalleryModal';
 
 const GalleryDetails = ({
     fetchingGallery,
@@ -17,7 +17,8 @@ const GalleryDetails = ({
         <div>some test carp</div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-30 row-gap-6 xl:mx-auto xl:w-1146">
   {
-    [10,20,30,40,50].map((element) =>  <div className="xs:w-full  bg-shade h-232 imgWrapper box-border">
+    [10,20,30,40,50].map((element) =>             <GalleryModal type="picture">
+    <div className="xs:w-full  bg-shade h-232 imgWrapper box-border">
     <div
       className="w-full  relative h-full flex items-end"
     >
@@ -34,7 +35,10 @@ const GalleryDetails = ({
           </div> */}
       </div>
     </div>
-  </div> )
+  </div> 
+  </GalleryModal>
+
+  )
   }
 </div>
       </div>
