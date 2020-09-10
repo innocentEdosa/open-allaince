@@ -14,7 +14,7 @@ const Footer = () => {
   const footerIcon = [<FordIcon />,<FordIcon />,<FordIcon/>];
 
   return (
-    <div className="min-h-516  bg-shade-cool py-68">
+    <div className="min-h-516  bg-shade-milk py-68">
       <div className="footer-lead flex flex-col items-center justify-center">
         <h6 className="text-center font-sans text-sm md:text-xl font-normal text-text-blm tracking-open mb-6">
           Join us in our mission to promote openness and transparency in Nigeria

@@ -5,11 +5,15 @@ const routes = {
     nap2: '/commitments/nap2',
     commitments: '/commitments/:nap',
     blog: '/blog',
-    blogDetails: '/blog-details',
+    blogDetails: '/blog-details/:id?',
+    baseBlogDetails: '/blog-details/',
     signup: '/register',
     document: '/documents/main',
     external: '/external',
+
     gallery: '/gallery',
+    galleryDetails: '/gallery/:id',
+    
     singleCommitment: '/commitment/:nap/:category/:id',
     joinUs: '/joinus'
 };

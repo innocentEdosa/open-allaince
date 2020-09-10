@@ -5,12 +5,14 @@ import thematic from './thematicStore/reducer';
 import commitment from './commitments/reducer';
 import blog from './Blog/reducer';
 import newsLetter from './Newsletter/reducer';
+import gallery from './Gallery/reducer';
 
 const rootReducer = combineReducers({
   thematic,
   commitment,
   blog,
   newsLetter,
+  gallery,
 });
 
 const configureStore = () => {

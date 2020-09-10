@@ -23,3 +23,44 @@
  .skeleton-wrapper > span{
 width: 100%
  }
+
+ .blogDate{
+     position: relative;
+ }
+
+ .blogDate::after {
+
+    content: '';
+    margin-top: 16px;
+    position: absolute;
+    height: 0.5px;
+    left: 0;
+    top: 10px;
+    background: #333;
+    width: 85%;
+    
+
+ }
+
+ .blogShowcase {
+     background-size: cover !important;
+     /* background-position: center; */
+ }
+
+ .blogBody > p > img {
+margin: 2rem auto;
+ }
+ .blogBody > p > strong > img {
+margin: 2rem auto;
+ }
+ .blogBody > p  > strong > a > img {
+margin: 2rem auto;
+ }
+
+ .blogBody > p {
+     margin: 1rem 0rem;
+ }
+
+ .blogBody > p:first-child {
+     margin-top: 0rem;
+ }

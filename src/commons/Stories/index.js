@@ -3,7 +3,7 @@ import storyList from "./storyList";
 import handleBlogData from '../../HOC/handleBlogData';
 import { Link } from 'react-router-dom';
 import routes from '../../utilities/routes';
-import Skeleton, { SkeletonTheme }from 'react-loading-skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 const Story = ({
   fetchingBlogs,

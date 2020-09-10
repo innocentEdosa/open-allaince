@@ -20,7 +20,9 @@ import SingleCommitment from './Commitments/singleCommitment/Commitment';
 import Join from './JoinUs';
 import Footer from './commons/Footer';
 import NewBlog from './Blog';
-
+import BlogDetailsV2 from './Blog/BlogDetails';
+import Gallery from './Gallery';
+import GalleryDetails from './Gallery/GalleryDetails';
 
 const siteRoutes = [
   {
@@ -48,11 +50,11 @@ const siteRoutes = [
   //   exact: true,
   //   main: () => <Redirect to="/blog/main" />,
   // },
-  {
-    path: '/blog-details/',
-    exact: true,
-    main: () => <Redirect to="/blog-details/main" />,
-  },
+  // {
+  //   path: '/blog-details/',
+  //   exact: true,
+  //   main: () => <Redirect to="/blog-details/main" />,
+  // },
   {
     path: '/commitments/',
     exact: true,
@@ -83,11 +85,11 @@ const siteRoutes = [
     exact: false,
     main: () => <Blog />,
   },
-  {
-    path: '/blog-details/:id',
-    exact: false,
-    main: () => <BlogDetails />,
-  },
+  // {
+  //   path: '/blog-details/:id',
+  //   exact: false,
+  //   main: () => <BlogDetails />,
+  // },
   {
     path: '/documents/main',
     exact: false,
@@ -194,6 +196,9 @@ handleVh = () => {
               <Route path={routes.singleCommitment} component={SingleCommitment} />
               <Route path={routes.joinUs} component={Join} />
              <Route path={routes.blog} component={NewBlog} />
+             <Route path={routes.blogDetails} component={BlogDetailsV2} />
+             <Route path={routes.galleryDetails} component={GalleryDetails} />
+             <Route path={routes.gallery} component={Gallery} />
               {/* <Route exact path="/login" component={LoginPage} /> */}
               {/* <Route path="/" component={Home} /> */}
               {/* <Route exact path="/reset-password" component={ResetPasswordPage} />

@@ -39,6 +39,8 @@ module.exports = {
         lightcoal: '#333333',
         background: '#FAF9F9',
         placeholder: '#858585',
+        maroon: '#26A6D1',
+        skyBlue: '#3B5998',
 
 
       },
@@ -124,7 +126,13 @@ module.exports = {
         198: '12.375rem',
         460: '28.75rem',
         343: '21.4375rem',
-        210: '13.125rem'
+        210: '13.125rem',
+        230: '14.375rem',
+        410: '25.625rem',
+        132: '8.25rem',
+        148: '9.25rem',
+        232: '14.5rem',
+        103: '6.4375rem',
       },
       fontSize: {
         60: '3.75rem',
