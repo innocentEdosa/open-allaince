@@ -16,7 +16,7 @@ const GalleryDetails = ({
 
         <div>some test carp</div>
         <div className="">
-          {[1, 2, , 3, 3, 3, 3, 3, 4].map((element) => (
+          {[1, 2, 3, 3, 3, 3, 3, 3, 4].map((element) => (
             //   <Link to={}>
             // <GalleryModal type="picture">
             <>
