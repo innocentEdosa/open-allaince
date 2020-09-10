@@ -7,7 +7,7 @@ import routes from "../utilities/routes";
 const GalleryDetails = () => {
   const {
     location: {
-      state: { data },
+      state: { data } = {},
     },
     push,
   } = useHistory();
@@ -19,7 +19,10 @@ const GalleryDetails = () => {
   }, []);
 
   return (
-    <div className="px-6 py-10 bg-shade-background">
+    <>
+    {
+
+    Boolean(data) && <div className="px-6 py-10 bg-shade-background">
       <div className="my-10 flex flex-col items-center">
         <h6 className="text-text-blue font-sans font-bold text-2xl text-center mb-6">
           {data.caption}
@@ -41,6 +44,8 @@ const GalleryDetails = () => {
         ))}
       </div>
     </div>
+    }
+    </>
   );
 };
 
