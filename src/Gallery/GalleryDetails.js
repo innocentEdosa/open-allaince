@@ -15,25 +15,9 @@ const GalleryDetails = ({
         </div>
 
         <div>some test carp</div>
-        <div className="">
-          {[1, 2, 3, 3, 3, 3, 3, 3, 4].map((element) => (
-            //   <Link to={}>
-            // <GalleryModal type="picture">
-            <>
-            <div>some toh tese carp</div>
-            <div key={element} className="xs:w-full  bg-shade h-232 imgWrapper box-border">
-            <div
-              className="w-full h-full flex items-end galleryImg"
-            >
-              <img src={'https://s3.eu-west-2.amazonaws.com/openalliance-storage/news/images/1553863664.jpg'} alt="others" className="h-full w-full" />
-            </div>
-          </div> 
-          </>
-            // </GalleryModal>
-
-            //   </Link>
-          ))}
-        </div>
+<div>
+  I honestly do no tunersate
+</div>
       </div>
     );
 }
