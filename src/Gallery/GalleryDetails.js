@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import GalleryCard from './GalleryCard';
-import Img from '../assets/img/learning.jpg'
 import formatDate from '../utilities/dateFormatter';
-import GalleryModal from './GalleryModal';
+// import GalleryModal from './GalleryModal';
 
 const GalleryDetails = ({
     fetchingGallery,
@@ -16,15 +13,19 @@ const GalleryDetails = ({
         <h6 className="text-text-blue font-sans font-bold text-2xl text-center mb-6">2nd National Steering Committee and Working Group meeting</h6>
     <h6>Uploaded <span>{formatDate(Date.now())}</span></h6>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-30 row-gap-6 xl:mx-auto xl:w-1146">
-          {[1, 2, , 3, 3, 3, 3, 3, 4].map(() => (
+
+        <div>some test carp</div>
+        <div className="">
+          {[1, 2, , 3, 3, 3, 3, 3, 4].map((element) => (
             //   <Link to={}>
-            <GalleryModal type="picture">
-            <div className="xs:w-full  bg-shade h-232 imgWrapper box-border">
+            // <GalleryModal type="picture">
+            <>
+            <div>some toh tese carp</div>
+            <div key={element} className="xs:w-full  bg-shade h-232 imgWrapper box-border">
             <div
-              className="w-full  relative h-full flex items-end galleryImg"
+              className="w-full h-full flex items-end galleryImg"
             >
-              <img src={Img} alt="some" className="h-full w-full" />
+              <img src={'https://s3.eu-west-2.amazonaws.com/openalliance-storage/news/images/1553863664.jpg'} alt="some" className="h-full w-full" />
               <div className="right-0 left-0 top-0 bottom-0  cursor-pointer p-6 absolute flex items-end">
                   {/* <div className="imgDetails">
                 <h6 className="text-xs font-bold text-text-snow tracking-open font-sans mb-1">
@@ -38,7 +39,8 @@ const GalleryDetails = ({
               </div>
             </div>
           </div> 
-            </GalleryModal>
+          </>
+            // </GalleryModal>
 
             //   </Link>
           ))}
