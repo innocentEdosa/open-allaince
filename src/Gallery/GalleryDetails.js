@@ -16,7 +16,11 @@ const GalleryDetails = ({
 
         <div>some test carp</div>
 <div>
-  I honestly do no tunersate
+  {
+    [10,20,30,40,50].map((element) => <div key={element}>
+      i honesly do no tunder 
+    </div>)
+  }
 </div>
       </div>
     );
