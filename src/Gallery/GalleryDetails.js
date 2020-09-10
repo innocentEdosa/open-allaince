@@ -25,18 +25,7 @@ const GalleryDetails = ({
             <div
               className="w-full h-full flex items-end galleryImg"
             >
-              <img src={'https://s3.eu-west-2.amazonaws.com/openalliance-storage/news/images/1553863664.jpg'} alt="some" className="h-full w-full" />
-              <div className="right-0 left-0 top-0 bottom-0  cursor-pointer p-6 absolute flex items-end">
-                  {/* <div className="imgDetails">
-                <h6 className="text-xs font-bold text-text-snow tracking-open font-sans mb-1">
-                  Some very crazy and not so interesting title which we hope
-                  people would look at
-                </h6>
-                <h6 className="font-sans text-text-snow tracking-open font-normal text-xs">
-                  date
-                </h6>
-                  </div> */}
-              </div>
+              <img src={'https://s3.eu-west-2.amazonaws.com/openalliance-storage/news/images/1553863664.jpg'} alt="others" className="h-full w-full" />
             </div>
           </div> 
           </>
