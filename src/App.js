@@ -25,7 +25,7 @@ import Gallery from './Gallery';
 import GalleryDetails from './Gallery/GalleryDetails';
 import Document from './Document';
 import ExternalLinks from './External';
-
+import AboutContainer from './About';
 
 const siteRoutes = [
   {
@@ -38,11 +38,11 @@ const siteRoutes = [
     exact: true,
     main: () => <Redirect to="/home/main" />,
   },
-  {
-    path: '/about/',
-    exact: true,
-    main: () => <Redirect to="/about/main" />,
-  },
+  // {
+  //   path: '/about/',
+  //   exact: true,
+  //   main: () => <Redirect to="/about/main" />,
+  // },
   // {
   //   path: '/documents/',
   //   exact: true,
@@ -189,6 +189,7 @@ handleVh = () => {
               <Route path={routes.blogDetails} component={BlogDetailsV2} />
               <Route path={routes.galleryDetails} component={GalleryDetails} />
               <Route path={routes.gallery} component={Gallery} />
+              <Route path={routes.about} component={AboutContainer} />
               {/* <Route exact path="/login" component={LoginPage} /> */}
               {/* <Route path="/" component={Home} /> */}
               {/* <Route exact path="/reset-password" component={ResetPasswordPage} />

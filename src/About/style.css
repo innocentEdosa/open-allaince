@@ -1,0 +1,11 @@
+.aboutTab {
+    background-color: #124B88;
+  background-image: -webkit-linear-gradient( -28deg, #124B88 0%, #124B88 50%, #fff 60%, #fff 60%);
+  background-image: linear-gradient( -70deg, #124B88 0%, #124B88 50%, #fff 50%, #fff 60%);
+}
+
+.aboutTabFlip {
+    background-color: #124B88;
+    background-image: -webkit-linear-gradient( -28deg, #fff 0%, #fff 50%, #124B88 60%, #124B88 60%);
+    background-image: linear-gradient( -80deg, #fff 0%, #fff 50%, #124B88 50%, #124B88 60%);
+}

@@ -7,6 +7,8 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+
+
 .white-txt {
   color: white !important;
 }
@@ -1424,7 +1426,9 @@ span.status-n {
 
 
 
-
+.newWrapper {
+  min-height: calc(100vh - 524px - 88px);
+}
 
 /* @-webkit-keyframes drope {
   0%   { opacity: 0; }
