@@ -43,6 +43,9 @@ module.exports = {
         skyBlue: '#3B5998',
         wickedDark: '#000',
         cream: '#EDEBEB',
+        latte: '#828282',
+        clear: '#E0E0E0',
+        green: '#64B663',
 
 
       },
@@ -59,6 +62,7 @@ module.exports = {
         purple: '#0F117A',
         lemon: '#64B663',
         notSoDark: '#051628',
+        milk: '#ABABAB',
       },
     },
     fontFamily: {
@@ -139,6 +143,9 @@ module.exports = {
         953: '953px',
         140: '140px',
         193: '193px',
+        180: '11.25rem',
+        800: '50rem',
+        57: '57px'
       },
       fontSize: {
         60: '3.75rem',

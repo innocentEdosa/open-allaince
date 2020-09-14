@@ -8,7 +8,7 @@ const routes = {
     blogDetails: '/blog-details/:id?',
     baseBlogDetails: '/blog-details/',
     signup: '/register',
-    document: '/documents/main',
+    document: '/documents/',
     external: '/external',
 
     gallery: '/gallery',

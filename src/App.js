@@ -23,6 +23,8 @@ import NewBlog from './Blog';
 import BlogDetailsV2 from './Blog/BlogDetails';
 import Gallery from './Gallery';
 import GalleryDetails from './Gallery/GalleryDetails';
+import Document from './Document';
+
 
 const siteRoutes = [
   {
@@ -40,11 +42,11 @@ const siteRoutes = [
     exact: true,
     main: () => <Redirect to="/about/main" />,
   },
-  {
-    path: '/documents/',
-    exact: true,
-    main: () => <Redirect to="/documents/main" />,
-  },
+  // {
+  //   path: '/documents/',
+  //   exact: true,
+  //   main: () => <Redirect to="/documents/main" />,
+  // },
   // {
   //   path: '/blog/',
   //   exact: true,
@@ -148,57 +150,43 @@ handleVh = () => {
     };
     return (
       <div className="App">
-      <Router>
-        <div>
+        <Router>
+          <div>
+            <Route component={ScrollToTop} />
+            <TopNav />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <Route component={ScrollToTop} />
-      <TopNav />
-      
-      <Switch>
+            <Switch>
               {/* <div className="ml-md-5 pl-md-3"> */}
-             
+
               {/* {customerRoutes.map((route, index) => (
                 <PrivateRoute key={index} exact={route.exact} path={route.path} component={Customer(route.main)} />
                 // <PrivateRoute key={index} exact={route.exact} path={route.path} component={route.main} />
               ))} */}
               {siteRoutes.map((route, index) => (
-                <Route key={index} exact={route.exact} path={route.path} component={route.main} />
+                <Route
+                  key={index}
+                  exact={route.exact}
+                  path={route.path}
+                  component={route.main}
+                />
               ))}
               {/* <Route path="/blog/main" component={Blog} /> */}
               <Route path="/callforexpression" component={CallForExpression} />
               <Route path={routes.home} component={NewHome} />
-              <Route path={routes.commitments} component={CommitmentContainer} />
-              <Route path={routes.singleCommitment} component={SingleCommitment} />
+              <Route
+                path={routes.commitments}
+                component={CommitmentContainer}
+              />
+              <Route
+                path={routes.singleCommitment}
+                component={SingleCommitment}
+              />
               <Route path={routes.joinUs} component={Join} />
-             <Route path={routes.blog} component={NewBlog} />
-             <Route path={routes.blogDetails} component={BlogDetailsV2} />
-             <Route path={routes.galleryDetails} component={GalleryDetails} />
-             <Route path={routes.gallery} component={Gallery} />
+              <Route path={routes.document} component={Document} />
+              <Route path={routes.blog} component={NewBlog} />
+              <Route path={routes.blogDetails} component={BlogDetailsV2} />
+              <Route path={routes.galleryDetails} component={GalleryDetails} />
+              <Route path={routes.gallery} component={Gallery} />
               {/* <Route exact path="/login" component={LoginPage} /> */}
               {/* <Route path="/" component={Home} /> */}
               {/* <Route exact path="/reset-password" component={ResetPasswordPage} />
@@ -207,9 +195,8 @@ handleVh = () => {
               {/* </div> */}
             </Switch>
             <Footer />
-        </div>
-       
-      </Router>
+          </div>
+        </Router>
       </div>
     );
   }
