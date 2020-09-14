@@ -7,6 +7,7 @@ import blog from './Blog/reducer';
 import newsLetter from './Newsletter/reducer';
 import gallery from './Gallery/reducer';
 import document from './Documents/reducer';
+import external from './ExternalLinks/reducer';
 
 const rootReducer = combineReducers({
   thematic,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   newsLetter,
   gallery,
   document,
+  external,
 });
 
 const configureStore = () => {

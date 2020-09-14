@@ -9,7 +9,7 @@ const routes = {
     baseBlogDetails: '/blog-details/',
     signup: '/register',
     document: '/documents/',
-    external: '/external',
+    external: '/external-links',
 
     gallery: '/gallery',
     galleryDetails: '/gallery/:id',

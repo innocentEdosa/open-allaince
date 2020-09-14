@@ -1,0 +1,17 @@
+.documentWrapper {
+    border: 1px solid transparent;
+    border-bottom-color: #333333;
+}
+
+.documentWrapper:hover {
+    background: rgba(100, 182, 99, 0.07);
+    /* border: 2px solid #64B663 */
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(100,182,99,1);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(100,182,99,1);
+    box-shadow: inset 0px 0px 0px 1px rgba(100,182,99,1);
+
+}
+
+.documentsWrapper {
+    min-height: calc(100vh - 524px - 88px);
+}

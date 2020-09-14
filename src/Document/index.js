@@ -11,8 +11,10 @@
 
     const downloadLinkRef = useRef(null);
 
-   useEffect(() => {
-     fetchDocuments();
+   useEffect((prev) => {
+       if(!documents.length) {
+           fetchDocuments();
+       }
    }, [fetchDocuments]);
 
    const downloadHandler = ({ src, key }) => {
