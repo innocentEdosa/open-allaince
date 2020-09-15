@@ -8,6 +8,7 @@ import newsLetter from './Newsletter/reducer';
 import gallery from './Gallery/reducer';
 import document from './Documents/reducer';
 import external from './ExternalLinks/reducer';
+import alliance from './About/reducer';
 
 const rootReducer = combineReducers({
   thematic,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   gallery,
   document,
   external,
+  alliance,
 });
 
 const configureStore = () => {

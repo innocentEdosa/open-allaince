@@ -8,10 +8,10 @@ const AboutTab = () => {
   const { tab } = useQuery();
 
   const tabClasses =
-    "flex h-10 rounded border-2 xs:border-primary-blue aboutTab";
+    "flex xs:h-10 rounded border-2 xs:border-primary-blue aboutTab";
 
   const activeTabClasses =
-    "flex h-10 rounded border-2 xs:border-primary-blue  aboutTabFlip";
+    "flex xs:h-10 rounded border-2 xs:border-primary-blue  aboutTabFlip";
 
   const tabBtnClasses =
     "w-1/2 focus:outline-none text-sm font-sans font-bold tracking-open text-text-blue";
@@ -20,20 +20,23 @@ const AboutTab = () => {
     "w-1/2 focus:outline-none text-sm font-sans font-bold tracking-open text-shade";
 
   return (
-    <div className={tab !== "about" ? tabClasses : activeTabClasses}>
+      <div className="lg:w-754 mx-auto">
+
+    <div className={(tab && tab !== "about") ? activeTabClasses : tabClasses}>
       <button
         onClick={() => push("/about/?tab=about")}
-        className={tab !== "about" ? tabBtnClasses : activeTabBtnClasses }
+        className={(tab !== "about"  ) ? tabBtnClasses : activeTabBtnClasses }
       >
         ABOUT US
       </button>
       <button
         onClick={() => push("/about/?tab=members")}
-        className={tab !== "about" ? activeTabBtnClasses : tabBtnClasses }
+        className={(tab !== "about" || !tab) ? activeTabBtnClasses : tabBtnClasses }
       >
         MEMBERS
       </button>
     </div>
+      </div>
   );
 };
 

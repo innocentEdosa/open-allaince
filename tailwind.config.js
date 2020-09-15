@@ -63,6 +63,9 @@ module.exports = {
         lemon: '#64B663',
         notSoDark: '#051628',
         milk: '#ABABAB',
+        grey: '#585858',
+        green: '#64B663',
+
       },
     },
     fontFamily: {
@@ -145,7 +148,8 @@ module.exports = {
         193: '193px',
         180: '11.25rem',
         800: '50rem',
-        57: '57px'
+        57: '57px',
+        1010: '1010px',
       },
       fontSize: {
         60: '3.75rem',
