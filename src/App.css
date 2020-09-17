@@ -1430,6 +1430,7 @@ span.status-n {
   min-height: calc(100vh - 524px - 88px);
 }
 
+
 /* @-webkit-keyframes drope {
   0%   { opacity: 0; }
   30% { opacity: 1; transform: translateY(-4px) }

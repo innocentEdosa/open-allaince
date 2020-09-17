@@ -50,7 +50,7 @@ const BlogDetails = ({ fetchSingleBlog, fetchingSingleBlog, activeBlog, blogs, f
           {activeBlog.title && (
             <div
               style={{
-                background: ` url(${activeBlog.banner}) no-repeat  center `,
+                background: `linear-gradient(0deg, rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.49)), url(${activeBlog.banner}) no-repeat  center `,
               }}
               className="xs:h-230 overflow-hidden flex items-center justify-center px-4 lg:items-end lg:pb-42 lg:h-410 blogShowcase"
             >

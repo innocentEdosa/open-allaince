@@ -1,6 +1,6 @@
 const routes = {
     home: '/v2',
-    about: '/about/',
+    about: '/about',
     nap1: '/commitments/nap1',
     nap2: '/commitments/nap2',
     commitments: '/commitments/:nap',
@@ -8,11 +8,11 @@ const routes = {
     blogDetails: '/blog-details/:id?',
     baseBlogDetails: '/blog-details/',
     signup: '/register',
-    document: '/documents/',
-    external: '/external-links',
+    document: '/resources/documents/',
+    external: '/resources/external-links',
 
-    gallery: '/gallery',
-    galleryDetails: '/gallery/:id',
+    gallery: '/resources/gallery',
+    galleryDetails: '/resources/gallery/:id',
     
     singleCommitment: '/commitment/:nap/:category/:id',
     joinUs: '/joinus'

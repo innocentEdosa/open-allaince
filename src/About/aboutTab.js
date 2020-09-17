@@ -7,6 +7,8 @@ const AboutTab = () => {
   const { push } = useHistory();
   const { tab } = useQuery();
 
+  console.log(tab, 'this is the tab we are working on')
+
   const tabClasses =
     "flex xs:h-10 rounded border-2 xs:border-primary-blue aboutTab";
 
@@ -22,16 +24,16 @@ const AboutTab = () => {
   return (
       <div className="lg:w-754 mx-auto">
 
-    <div className={(tab && tab !== "about") ? activeTabClasses : tabClasses}>
+    <div className={(tab === 'about' || !tab) ? activeTabClasses : tabClasses}>
       <button
         onClick={() => push("/about/?tab=about")}
-        className={(tab !== "about"  ) ? tabBtnClasses : activeTabBtnClasses }
+        className={(tab === "about"  || !tab ) ? activeTabBtnClasses : tabBtnClasses }
       >
         ABOUT US
       </button>
       <button
         onClick={() => push("/about/?tab=members")}
-        className={(tab !== "about" || !tab) ? activeTabBtnClasses : tabBtnClasses }
+        className={(tab !== "about" && tab) ? activeTabBtnClasses : tabBtnClasses }
       >
         MEMBERS
       </button>

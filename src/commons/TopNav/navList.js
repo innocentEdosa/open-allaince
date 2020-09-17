@@ -13,7 +13,7 @@ const navList = [
   {
     title: "National Action Plans",
     isDropdown: true,
-    path: "",
+    path: "nap",
     icon: <ChevronDown />,
     icon2: <ChevronUp />,
     dropdown: [{
@@ -33,7 +33,7 @@ const navList = [
   {
     title: "Resources",
     isDropdown: true,
-    path: "",
+    path: "resources",
     icon: <ChevronDown />,
     icon2: <ChevronUp />,
     dropdown: [{

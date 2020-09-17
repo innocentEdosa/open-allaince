@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { useHistory, BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 
 import './App.css';
 import Home from './website/containers/home';
@@ -129,32 +129,32 @@ const siteRoutes = [
 
 
 
-class App extends Component {
+const  App = () => {
 
-componentDidMount() {
-  this.handleVh();
-  window.addEventListener('resize', this.handleVh)
-}
+useEffect(() => {
+  handleVh();
+  window.addEventListener("resize", handleVh);
+  return () => window.removeEventListener("resize", handleVh);
+}, []);
 
-componentWillUnmount(){
-  window.removeEventListener('resize', this.handleVh)
-}
+// console.log(pathname, 'this i sthe pathna in papp')
+
   
-handleVh = () => {
+const handleVh = () => {
   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
 }
-  render() {
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
 
-    const ScrollToTop = () => {
-      window.scrollTo(0, 0);
-      return null;
-    };
+
     return (
       <div className="App">
         <Router>
           <div>
             <Route component={ScrollToTop} />
-            <TopNav />
+            <Route component={TopNav} />
 
             <Switch>
               {/* <div className="ml-md-5 pl-md-3"> */}
@@ -202,7 +202,6 @@ handleVh = () => {
         </Router>
       </div>
     );
-  }
 }
 
 export default App;

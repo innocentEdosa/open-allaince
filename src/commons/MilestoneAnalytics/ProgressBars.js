@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  CircularProgressbar,
   CircularProgressbarWithChildren,
   buildStyles,
 } from "react-circular-progressbar";
@@ -10,7 +9,7 @@ import AnimatedProgressProvider from "./AnimatedProgress";
 const ProgressBar = ({
   valueEnd = 0,
   children,
-  pathStroke,
+  pathStroke = 'rgba(47,128,237,1)',
   className,
   showValue = true,
   strokeWidth = 4,
@@ -31,7 +30,7 @@ const ProgressBar = ({
               pathColor: pathStroke,
 
               path: {
-                strokeLinecap: "round",
+                strokeLinecap: "butt",
                 transition: "stroke-dashoffset 0.5s ease 0s",
                 transformOrigin: "center center",
               },

@@ -13,22 +13,26 @@ const CommitmentContainer = ({
   fetchThematicDataHandler,
   fetchData,
 }) => {
-    const { nap } = useParams();
+  const { nap } = useParams();
 
-useEffect(() => {
-  if (nap === "nap1" && !thematicDataNap1.length) {
-    fetchData(1);
-  }
-}, [nap]);
+  useEffect(() => {
+    if (nap === "nap1" && !thematicDataNap1.length) {
+      fetchData(1);
+    }
+  }, [nap]);
 
-useEffect(() => {
-  if (nap === "nap2" && !thematicDataNap2.length) {
-    fetchData(2);
-  }
-}, [nap]);
+  useEffect(() => {
+    if (nap === "nap2" && !thematicDataNap2.length) {
+      fetchData(2);
+    }
+  }, [nap]);
 
   return (
-    <CommitmentList  nap={nap} loading={nap === 'nap1' ? fetchingNap1 : fetchingNap2} napData={nap === 'nap1' ? thematicDataNap1 : thematicDataNap2 } />
+    <CommitmentList
+      nap={nap}
+      loading={nap === "nap1" ? fetchingNap1 : fetchingNap2}
+      napData={nap === "nap1" ? thematicDataNap1 : thematicDataNap2}
+    />
   );
 };
 

@@ -1,6 +1,9 @@
 .documentWrapper {
     border: 1px solid transparent;
     border-bottom-color: #333333;
+    -webkit-box-shadow: inset 0px 0px 0px 1px transparent;
+    -moz-box-shadow: inset 0px 0px 0px 1px transparent;
+    box-shadow: inset 0px 0px 0px 1px transparent;
 }
 
 .documentWrapper:hover {

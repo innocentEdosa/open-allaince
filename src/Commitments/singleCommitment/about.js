@@ -8,7 +8,7 @@ const AboutCommitment = ({
 }) => {
     return ( 
         
-        <div className="bg-shade xs:p-4">
+        <div className="bg-shade xs:p-4 aboutSection">
             {
                 fetchingCommitment && [1,2,3].map(() => <div className="w-full bg-shade-background flex flex-col justify-center h-40 mb-6 px-6">
                     <Skeleton count={3} />

@@ -65,6 +65,7 @@ const MileStoneAnalytics = ({
                 strokeWidth={2}
                 showValue={false}
                 className="w-460 h-460"
+                pathStroke="#32B973"
                 valueEnd={Math.round(analytics.completed)}
               >
                 <ProgressBar

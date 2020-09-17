@@ -14,7 +14,7 @@ const MilestoneList = ({
     }
 }) => {
 return (
-  <div className="bg-shade w-full py-10 border-b  border-shade-lightcoal border-opacity-30 last:border-0">
+  <div className="bg-shade w-full py-10 border-b  border-shade-lightcoal border-opacity-30 last:border-0 px-10 ">
     <h6 className="text-base text-text-dark tracking-open font-sans font-semibold">
       {title}{" "}
     </h6>
@@ -53,8 +53,8 @@ return (
       </div>
     </div>
     </div>
-    <div>
-    <h6 className="tracking-open text-text-placeholder font-sans font-medium mb-2">
+    <div className="mileStone">
+    <h6 className="tracking-open text-text-placeholder font-sans font-medium mb-2 ">
         UPDATES
       </h6>
     {Parser(milestone_info)}
@@ -63,20 +63,19 @@ return (
 );
 }
 
-const CommitmentMilestones = ({
-    fetchingMilestone,
-    milestones,
-}) => {
-    return (             <div className="bg-shade py-4 px-4">
-            {
-                fetchingMilestone && [1,2,3].map(() => <div className="w-full bg-shade-background flex flex-col justify-center h-40 mb-6 px-6 ">
-                    <Skeleton count={3} />
-                </div>)
-            }
-    {
-       !fetchingMilestone &&  milestones.map((milestone) => <MilestoneList milestone={milestone} /> )
-    }
-  </div> );
-}
- 
+const CommitmentMilestones = ({ fetchingMilestone, milestones }) => {
+  return (
+    <div className="bg-shade py-4 ">
+      {fetchingMilestone &&
+        [1, 2, 3].map(() => (
+          <div className="w-full bg-shade-background flex flex-col justify-center h-40 mb-6 px-10 ">
+            <Skeleton count={3} />
+          </div>
+        ))}
+      {!fetchingMilestone &&
+        milestones.map((milestone) => <MilestoneList milestone={milestone} />)}
+    </div>
+  );
+};
+
 export default CommitmentMilestones;

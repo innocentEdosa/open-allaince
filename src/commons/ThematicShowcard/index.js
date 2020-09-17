@@ -19,7 +19,7 @@ const ThematicShowcard = ({
       <p className="text-center hidden lg:block mt-8 w-946 font-sans text-lg ">
       Countries or States are peculiar from one another. Each state or country’s commitments contained in the Action Plan are built around the global OGP thematic areas.
       </p>
-      {fetchingNap1 ? (
+      {/* {fetchingNap1 ? (
         <div className=" px-6 pt-12 flex w-full justify-center relative flex-wrap flex-no-wrap box-border">
           {[1, 2, 3, 4].map(() => (
             <div className=" px-4 py-42 lg:py-8 bg-shade lg:odd:mr-30 box-border flex flex-col-reverse lg:flex-row rounded-lg bg-shade items-center mb-36  flex-shrink-0 w-full lg:w-43percent xl:w-558 lg:justify-center">
@@ -36,52 +36,49 @@ const ThematicShowcard = ({
               </div>
             </div>
           ))}
-        </div>
-      ) : (
+        </div> */}
+      {/* // ) : ( */}
         <div className=" xs:px-6 xs:pt-12 flex w-full justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch box-border">
-          {thematicDataNap1.map(({ title, info, logo }) => (
+          {thematicList.map(({ title, info, logo }) => (
             <div
               key={title}
-              className=" xs:px-4 xs:py-42 lg:py-8 bg-shade  box-border flex flex-col-reverse lg:flex-row xl:odd:mr-30 rounded-lg items-center mb-36 xs:last:mb-0 lg:last:mb-36  w-full xl:w-558 lg:justify-center"
+              className=" xs:px-28 xs:py-42 lg:py-8 bg-shade  box-border flex flex-col-reverse lg:flex-row xl:odd:mr-30 rounded-lg items-center mb-36 xs:last:mb-0 lg:last:mb-36  w-full xl:w-558 lg:justify-center"
             >
               <div className="flex-grow mt-10 lg:mt-0 flex flex-col items-center lg:items-start lg:text-left ">
-                <Link to={routes.nap1}>
+                <Link to={routes.nap2}>
                   <h6 className="card-text text-text-dark font-semibold text-lg md:text-xl tracking-open mb-4 hover:text-text-dark">
                     {title}
                   </h6>
                 </Link>
-                <p className="card-text mb-6 w-auto lg:pr-10 text-text-dark hover:text-text-dark">
-                  <Link to={routes.nap1}>
+                <p className="card-text mb-6 w-auto lg:pr-6 text-text-dark hover:text-text-dark">
+                  <Link to={routes.nap2}>
                     <span className="text-text-dark hover:text-text-dark">
-                      {Parser(info)}
+                      {info}
                     </span>
                   </Link>
                 </p>
 
                 <p className="text-text-purple text-base cursor-pointer">
-                  <Link to={routes.nap1}>
+                  <Link to={routes.nap2}>
                     <span className="text-text-purple hover:text-text-purple">
                       See Commitments
                     </span>
                   </Link>
                 </p>
               </div>
-              <div className="flex-shrink-0">
-                <img src={logo} alt="thematic_logo" />
+
+              <div className="flex-shrink-0 w-240">
+              <Link to={routes.nap2}>
+                <img className="" src={logo} alt="thematic_logo" />
+              </Link>
               </div>
+
             </div>
           ))}
         </div>
-      )}
+      {/* // )} */}
     </div>
   );
 };
 
-// created_at: "2019-04-02 11:13:56"
-// id: 13
-// info: "<p><!--(figmeta)eyJmaWxlS2V5IjoiWUQ0YXhyVm1rWnpDcU"
-// logo: "https://s3.eu-west-2.amazonaws.com/openalliance-storage/thematic-area-logos/1554976431.png"
-// nap: "1"
-// title: "Fiscal Transparency"
-// updated_at: "2019-04-11 09:53:51"
 export default handleThematicData(ThematicShowcard);

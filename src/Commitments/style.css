@@ -22,3 +22,50 @@
     list-style-image: url('../assets/icons/Ellipse.svg');
     list-style-position: inside;
 }
+
+.aboutSection {
+    font-family: 'Raleway', 'sans-serif' !important;
+    word-break: break-word;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+}
+.aboutSection > p , .aboutSection > p > span {
+    font-family: 'Raleway', 'sans-serif' !important;
+    word-break: break-word;
+    letter-spacing: 0.03em;
+    font-size: 16px !important;
+    margin: 0rem !important;
+}
+
+.aboutSection > p:last-child  {
+    margin-bottom: 16px !important;
+}
+.aboutSection > p > span {
+    display: inline-block;
+    margin: 16px 0px 16px 0rem !important;
+
+
+}
+
+.mileStone {
+    font-family: 'Raleway', 'sans-serif' !important;
+    word-break: break-word;
+    letter-spacing: 0.03em;
+    font-size: 16px; 
+}
+
+.mileStone > p , .mileStone > p > span, .mileStone > strong, .mileStone > p > strong, .mileStone > p > strong  > span {
+    font-family: 'Raleway', 'sans-serif' !important;
+    word-break: break-word;
+    letter-spacing: 0.03em;
+    font-size: 16px !important;
+    margin: 0px !important;
+    line-height: 25px;
+}
+
+.mileStone > p  {
+    margin-bottom: 20px !important;
+}
+.mileStone > p:last-child  {
+    margin-bottom: 0px !important;
+}
