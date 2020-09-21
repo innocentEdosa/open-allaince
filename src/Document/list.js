@@ -13,7 +13,7 @@ const DocumentList = ({ fetchingDocuments, documents, downloadHandler }) => {
       </div>))}
 
       {!fetchingDocuments && (
-        <div className="xs:border border-shade-latte xl:w-1146 mx-auto ">
+        <div className="xl:w-1146 mx-auto topDocumentWrapper">
           {documents.map(({ src, name, type, key, timestamp: { date } }) => (
             <div
               key={key}

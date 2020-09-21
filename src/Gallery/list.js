@@ -7,7 +7,7 @@ const GalleryList = ({
     gallery
 }) => {
     return (
-      <div className="px-6 py-10 bg-shade-background">
+      <div className="px-6 py-10 bg-shade-background newWrapper">
         <div className="flex flex-col md:flex-row md:flex-wrap  gallery xl:mx-auto xl:w-1146">
           {gallery.map((data) => (
               <GalleryCard key={data.id} data={data} />

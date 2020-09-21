@@ -1,0 +1,39 @@
+.join_us_accessory {
+    background: url('../assets/icons/svg_bg_1.svg') no-repeat ;
+    background-size: contain;
+    height: 43px;
+    margin-top: 40px;
+};
+
+
+
+.join_form {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+    background:  red !important;
+}
+
+.join_us_accessory_2 {
+    background: url('../assets/icons/svg_bg_3.svg') no-repeat;
+    height: 134px;
+    margin-top: 52px;
+}
+
+
+/* 'lg': '1024px', */
+@media (min-width: 1024px) { 
+        .content-wrapper {
+            padding: 87px 67px 0px 67px;
+        }
+
+        .join_us_accessory {
+            background: url('../assets/icons/svg_bg_2.svg') no-repeat ;
+            background-size: contain;
+            height: 128px;
+            margin-top: 0px;
+            background-position-y: 10px
+        };
+
+        .joinus {
+            height: 752px;
+        }
+       }

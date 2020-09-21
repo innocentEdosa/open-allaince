@@ -2,25 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import formatDate from '../utilities/dateFormatter';
+import routes from '../utilities/routes';
 
 const GalleryCard = ({
   data
 }) => {
-
-//   id(pin):5
-// caption(pin):"Open Alliance Conference 2020"
-// created_at(pin):"2020-09-10 12:52:31"
-// updated_at(pin):"2020-09-10 12:52:31"
-// id(pin):1
-// gallery_id(pin):5
-// file_name(pin):"1599743293.jpeg"
-// file_url(pin):"https://s3.eu-west-2.amazonaws.com/open-alliance-admin-assets/gallery/1599743293.jpeg"
-// file_size(pin):"3527"
-// created_at(pin):"2020-09-10 13:08:13"
-// updated_at(pin):"2020-09-10 13:08:13"
     return (             <div className="xs:w-full  bg-shade mb-6 last:mb-0 h-232 galleryWrapper p-2 box-border">
       <Link to={{
-        pathname: `/gallery/${data.id}`,
+        pathname: `${routes.gallery}/${data.id}`,
         state: {data}
       }}>
     <div

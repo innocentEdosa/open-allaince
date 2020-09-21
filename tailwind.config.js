@@ -93,7 +93,11 @@ module.exports = {
 
     'xl': '1280px',
     },
+    boxShadow: {
+      border:  'inset 0 0 0 5px #828282',
+    },
     extend: {
+
 
       spacing: {
         88: "5.5rem",

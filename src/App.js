@@ -1,15 +1,9 @@
 import React, { useEffect } from 'react';
-import { useHistory, BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 
 import './App.css';
-import Home from './website/containers/home';
-import About from './website/containers/about';
-import Blog from './website/containers/blog';
-import BlogDetails from './website/containers/blog/blog-details';
 import Documents from './website/containers/documents/index';
-import Commitments from './website/containers/commitment/index';
 import Register from './website/containers/auth/index';
-import Milestones from './website/containers/commitment/milestones';
 import Notfound from './website/containers/notfound/index';
 import CallForExpression from './callForExpression';
 import routes from './utilities/routes';
@@ -33,96 +27,12 @@ const siteRoutes = [
     exact: true,
     main: () => <Redirect to="/v2" />,
   },
-  {
-    path: '/home/',
-    exact: true,
-    main: () => <Redirect to="/home/main" />,
-  },
-  // {
-  //   path: '/about/',
-  //   exact: true,
-  //   main: () => <Redirect to="/about/main" />,
-  // },
-  // {
-  //   path: '/documents/',
-  //   exact: true,
-  //   main: () => <Redirect to="/documents/main" />,
-  // },
-  // {
-  //   path: '/blog/',
-  //   exact: true,
-  //   main: () => <Redirect to="/blog/main" />,
-  // },
-  // {
-  //   path: '/blog-details/',
-  //   exact: true,
-  //   main: () => <Redirect to="/blog-details/main" />,
-  // },
-  {
-    path: '/commitments/',
-    exact: true,
-    main: () => <Redirect to="/commitments/main" />,
-  },
-  {
-    path: '/register/',
-    exact: true,
-    main: () => <Redirect to="/register/main" />,
-  },
-  // {
-  //   path: '/admin/reports/',
-  //   exact: true,
-  //   main: () => <Redirect to="/admin/reports/main" />,
-  // },
-  {
-    path: '/home/main',
-    exact: false,
-    main: () => <Home />,
-  },
-  {
-    path: '/about/main',
-    exact: false,
-    main: () => <About />,
-  },
-  {
-    path: '/blog/main',
-    exact: false,
-    main: () => <Blog />,
-  },
-  // {
-  //   path: '/blog-details/:id',
-  //   exact: false,
-  //   main: () => <BlogDetails />,
-  // },
-  {
-    path: '/documents/main',
-    exact: false,
-    main: () => <Documents />,
-  },
-  {
-    path: '/commitments/main',
-    exact: false,
-    main: () => <Commitments />,
-  },
-  {
-    path: '/commitments/milestones/:id',
-    exact: false,
-    main: () => <Milestones />,
-  },
+
   {
     path: '/register/main',
     exact: false,
     main: () => <Register />,
   },
-  // {
-  //   path: '/s/about/main',
-  //   exact: false,
-  //   main: () => <CDashboard />,
-  // },
-  // {
-  //   path: '/admin/schemes/main',
-  //   exact: false,
-  //   main: () => <Schemelist />,
-  // },
 ];
 
 

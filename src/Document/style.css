@@ -1,3 +1,7 @@
+.topDocumentWrapper {
+    box-shadow: inset 0 0 0 5px #828282 !important;
+}
+
 .documentWrapper {
     border: 1px solid transparent;
     border-bottom-color: #333333;
@@ -18,3 +22,4 @@
 .documentsWrapper {
     min-height: calc(100vh - 524px - 88px);
 }
+
