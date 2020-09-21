@@ -5,11 +5,11 @@ import { fetchThematicAreaAction } from '../store/thematicStore/actions'
 const handleThematicData = ( ComposedComponent, nap = 1) =>  {
   const WrapperComponent = (props) => {
 
-    const { fetchThematicData, thematicDataNap1, thematicDataNap2 } = props;
+    const { fetchThematicData, thematicDataNap1, thematicDataNap2, fetchingNap1, fetchingNap2 } = props;
     useEffect(() => {
       if (
-        (nap === 1 && !thematicDataNap1.length) ||
-        (nap === 2 && !thematicDataNap2.length)
+        ((nap === 1 && !thematicDataNap1.length) &&  !fetchingNap1) ||
+        ((nap === 2 && !thematicDataNap2.length) && !fetchingNap2)
       ) {
         fetchThematicData(nap);
       }
