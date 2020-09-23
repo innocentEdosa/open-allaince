@@ -9,6 +9,7 @@ import gallery from './Gallery/reducer';
 import document from './Documents/reducer';
 import external from './ExternalLinks/reducer';
 import alliance from './About/reducer';
+import join from './Join/reducer';
 
 const rootReducer = combineReducers({
   thematic,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   document,
   external,
   alliance,
+  join,
 });
 
 const configureStore = () => {

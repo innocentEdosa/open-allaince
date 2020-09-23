@@ -12,8 +12,10 @@ const DocumentList = ({ fetchingDocuments, documents, downloadHandler }) => {
         <Skeleton count="3"/>
       </div>))}
 
+      <div className="xl:w-1146 mx-auto shadow-border">
+        <>
       {!fetchingDocuments && (
-        <div className="xl:w-1146 mx-auto topDocumentWrapper">
+        <>
           {documents.map(({ src, name, type, key, timestamp: { date } }) => (
             <div
               key={key}
@@ -42,8 +44,10 @@ const DocumentList = ({ fetchingDocuments, documents, downloadHandler }) => {
               </button>
             </div>
           ))}
-        </div>
+          </>
       )}
+      </>
+        </div>
     </div>
   );
 };

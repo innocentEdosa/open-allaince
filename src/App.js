@@ -20,6 +20,7 @@ import GalleryDetails from './Gallery/GalleryDetails';
 import Document from './Document';
 import ExternalLinks from './External';
 import AboutContainer from './About';
+import JoinSuccess from './JoinUs/JoinSuccess';
 
 const siteRoutes = [
   {
@@ -92,6 +93,7 @@ const ScrollToTop = () => {
                 path={routes.singleCommitment}
                 component={SingleCommitment}
               />
+              <Route path={routes.joinSuccess} component={JoinSuccess} />
               <Route path={routes.joinUs} component={Join} />
               <Route path={routes.document} component={Document} />
               <Route path={routes.external} component={ExternalLinks} />

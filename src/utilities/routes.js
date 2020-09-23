@@ -1,3 +1,5 @@
+import JoinSuccess from "../JoinUs/JoinSuccess";
+
 const routes = {
     home: '/v2',
     about: '/about',
@@ -15,7 +17,8 @@ const routes = {
     galleryDetails: '/resources/gallery/:id',
     
     singleCommitment: '/commitment/:nap/:category/:id',
-    joinUs: '/joinus'
+    joinUs: '/joinus',
+    joinSuccess: '/joinus/thanks'
 };
 
 export default routes;

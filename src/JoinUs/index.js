@@ -2,18 +2,26 @@ import React from 'react';
 import Form from './form';
 import { connect } from 'react-redux';
 import { registerCompanyAction } from '../store/Join/action';
+import routes from '../utilities/routes';
+import { useHistory } from 'react-router-dom';
 
-import './style.css';
-const GetInvolved = ({ registerCompany }) => {
-  const handleRegistration = (params) => {
-    registerCompany(params);
+import './join.css';
+const GetInvolved = ({ registerCompany, registering, joinSuccess }) => {
+
+  const { push } = useHistory()
+  const handleRegistration =  async (params) => {
+    const response = await registerCompany(params);
+    if(response ) {
+      push(routes.joinSuccess)
+    }
+    console.log(response, 'this is the response from the place')
   };
 
   return (
     <>
       <div className="bg-shade-background joinus">
-        <div className="content-wrapper lg:flex lg:flex-row lg:justify-center items-start">
-          <div className="hidden lg:flex   flex-col justify-center mr-6">
+        <div className="content-wrapper lg:flex lg:flex-row lg:justify-center items-start xl:w-1146 mx-auto xl:justify-start xl:px-0">
+          <div className="hidden lg:flex   flex-col justify-center mr-6 ">
             <div>
               <p className="font-sans text-sm tracking-open leading-6">
                 Open Alliance started in the wake of 2014 through the initiative
@@ -36,15 +44,8 @@ const GetInvolved = ({ registerCompany }) => {
             </div>
             <div className="join_us_accessory_2 "></div>
           </div>
-          <div className="bg-shade px-6 lg:px-0 py-10 lg:py-6 flex flex-col flex-shrink-0">
-            <h6 className="text-text-lemon font-sans font-bold text-sm lg:text-base tracking-open mb-2 lg:mx-6">
-              The Alliance is open to adding more members
-            </h6>
-            <h6 className="lg:text-lg text-text-sm font-sans tracking-open text-text-dark lg:mx-6">
-              {" "}
-              We are excited you're here please fill the form below
-            </h6>
-            <Form onSubmit={handleRegistration} />
+          <div className="bg-shade px-6 lg:px-0 py-10 lg:py-6 flex flex-col flex-shrink-0 xs:w-full lg:w-558">
+            <Form registering={registering} onSubmit={handleRegistration} />
           </div>
         </div>
         <div className="join_us_accessory"></div>
@@ -53,7 +54,15 @@ const GetInvolved = ({ registerCompany }) => {
   );
 };
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = ({
+  join: {
+    registering,
+    // joinSuccess
+  }
+}) => ({
+  registering,
+  // joinSuccess,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   registerCompany: (params) => dispatch(registerCompanyAction(params)),

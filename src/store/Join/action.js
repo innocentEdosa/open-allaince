@@ -1,8 +1,7 @@
 import { registerCompanyService } from "./api";
 import {
   REGISTERING_COMPANY,
-  REGISTERING_COMAPNY_FAILED,
-  REGISTERING_COMPANY_SUCCESS,
+  REGISTERING_COMPANY_COMPLETED,
 } from "./type";
 
 export const registerCompanyAction = (params) => async (dispatch) => {
@@ -11,14 +10,16 @@ export const registerCompanyAction = (params) => async (dispatch) => {
   });
   try {
     const formData = new FormData();
+    formData.append("description", params.description)
+    formData.append("name", params.name)
     formData.append("email", params.email);
     formData.append("logo", params.file[0]);
 
-    const response = await registerCompanyService(formData);
-    console.log(response);
-    console.log(params);
+    await registerCompanyService(formData);
+    dispatch({type: REGISTERING_COMPANY_COMPLETED, });
+    return true;
   } catch (error) {
-    console.log(error);
-    console.log(error.response, "this is err");
+   dispatch({type: REGISTERING_COMPANY_COMPLETED})
+   return false;
   }
 };
