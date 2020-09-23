@@ -99,7 +99,7 @@ const BlogDetails = ({ fetchSingleBlog, fetchingSingleBlog, activeBlog, blogs, f
               Share on twitter
             </button>
           </TwitterShareButton>
-            <FacebookShareButton hashtag="#openallaince" quote={activeBlog.title} url={window.location.href}>
+            <FacebookShareButton hashtag="#openallaince" quote={activeBlog.title} url={`http://open-alliance.herokuapp.com/blog-details/${id}`}>
 
             <button className="bg-shade-skyBlue w-full h-52 rounded-lg text-text-snow text-lg font-bold font-sans tracking-open lg:w-auto lg:px-6 outline-none focus:outline-none lg:mb-0 "> 
               Share on facebook
