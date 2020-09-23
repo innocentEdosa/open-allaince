@@ -8,6 +8,10 @@ import formatDate from '../utilities/dateFormatter';
 import Skeleton from 'react-loading-skeleton';
 import BlogCard from './BlogCard';
 import { Element, Link } from 'react-scroll';
+import { 
+  FacebookShareButton,
+  TwitterShareButton
+} from 'react-share'
 
 const BlogDetails = ({ fetchSingleBlog, fetchingSingleBlog, activeBlog, blogs, fetchBlogs }) => {
   const { id } = useParams();
@@ -88,12 +92,19 @@ const BlogDetails = ({ fetchSingleBlog, fetchingSingleBlog, activeBlog, blogs, f
               {activeBlog.body && Parser(activeBlog.body)}
             </div>
           <div className="flex flex-col lg:flex-row  w-full my-10">
-            <button className="bg-shade-maroon w-full h-52 rounded-lg text-text-snow text-lg font-bold font-sans tracking-open mb-4 lg:mb-0 lg:mr-6 lg:w-auto lg:px-6 outline-none focus:outline-none">
+          <TwitterShareButton   url={`http://open-alliance.herokuapp.com/blog-details/${id}`}
+            title={activeBlog.title} hashtags={["#openalliance" ]}related={['@OpenAllianceNG']}>
+
+            <button className="bg-shade-maroon w-full h-52 rounded-lg text-text-snow text-lg font-bold font-sans tracking-open xs:mb-4 lg:mb-0 lg:mr-6 lg:w-auto lg:px-6 outline-none focus:outline-none">
               Share on twitter
             </button>
-            <button className="bg-shade-skyBlue w-full h-52 rounded-lg text-text-snow text-lg font-bold font-sans tracking-open lg:w-auto lg:px-6 outline-none focus:outline-none "> 
+          </TwitterShareButton>
+            <FacebookShareButton hashtag="#openallaince" quote={activeBlog.title} url={window.location.href}>
+
+            <button className="bg-shade-skyBlue w-full h-52 rounded-lg text-text-snow text-lg font-bold font-sans tracking-open lg:w-auto lg:px-6 outline-none focus:outline-none lg:mb-0 "> 
               Share on facebook
             </button>
+            </FacebookShareButton>
           </div>
           <div className="flex flex-col lg:flex-row lg:mt-148">
                 {

@@ -17,7 +17,7 @@ const footerNavList = [
   },
   {
     title: "Members",
-    path: routes.about
+    path: `${routes.about}?tab=members`
   },
 ];
 
