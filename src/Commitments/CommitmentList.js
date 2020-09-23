@@ -4,6 +4,7 @@ import { ReactComponent as MileStone } from "../assets/icons/milestone.svg";
 import { ReactComponent as Calendar } from "../assets/icons/calendar.svg";
 import routes from "../utilities/routes";
 import Skeleton from 'react-loading-skeleton';
+import { yearsDiff } from '../utilities/dateFormatter';
 
 const List = ({
   nap,
@@ -17,7 +18,7 @@ const List = ({
       <h6 className="font-medium text-2xl font-sans tracking-open text-text-lemon mb-8 lg:text-4xl">
         {mainTitle}
       </h6>
-      {commitments.map(({ title, id }, innerIndex) => {
+      {commitments.map(({ title, id, created_at }, innerIndex) => {
         const list = (
           <Link to={`/commitment/${nap}/${mainTitle}/${id}`}>
             <div className="rounded-lg mb-6 p-28 cursor-pointer commitmentList">
@@ -37,7 +38,7 @@ const List = ({
                 <div className="mr-4 flex items-center">
                   <Calendar />{" "}
                   <h6 className="ml-11 font-sans text-xs font-normal text-text-blm">
-                    <span className="font-bold text">9</span> years ago
+        <span className="font-bold text">{yearsDiff(created_at)}</span> years ago
                   </h6>
                 </div>
               </div>

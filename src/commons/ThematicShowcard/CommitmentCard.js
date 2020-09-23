@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from "react-slick";
 import parser from 'html-react-parser';
 import handleThematicData from '../../HOC/handleThematicData';
@@ -8,7 +8,7 @@ import handleThematicData from '../../HOC/handleThematicData';
 
 
 const CommitmentSlide = ({ fetchingNap1, thematicDataNap1 = [] }) => {
-  const numberOfScrolls = useRef(null);
+  const numberOfScrolls = useRef(2);
 
   const generateRandomArrayOfCommitments = (
     arrOfCommitments,
@@ -27,6 +27,13 @@ const CommitmentSlide = ({ fetchingNap1, thematicDataNap1 = [] }) => {
       numberOfScrolls.current = Math.ceil(thematicDataNap1.length / 2);
     }
   }, [fetchingNap1]);
+
+  const [causeAReload, setCauseAReload] = useState(false)
+
+
+  useEffect(() => {
+    setCauseAReload((prev) => !prev)
+  }, []);
 
   const settings = {
     dots: false,
@@ -72,14 +79,14 @@ const CommitmentSlide = ({ fetchingNap1, thematicDataNap1 = [] }) => {
   return (
     <div className="xs:px-6 xs:py-10 lg:flex lg:justify-center">
       <div className="w-full overflow-visible outline-none focus:outline-none active:outline-none ">
-        <Slider {...settings}>
+        { !fetchingNap1 && <Slider {...settings}>
           {generateRandomArrayOfCommitments(
             thematicDataNap1,
             numberOfScrolls.current
           ).map((_, index) => (
             <CommitmentCard key={index} />
           ))}
-        </Slider>
+        </Slider>}
       </div>
     </div>
   );
