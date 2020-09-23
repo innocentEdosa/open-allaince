@@ -4,7 +4,7 @@ import formatDate from "../utilities/dateFormatter";
 import routes from "../utilities/routes";
 
 const BlogCard = ({ title, banner, created_at, id }) => {
-    return (  <div className="flex rounded overflow-hidden flex-col xs:mb-6 w-full bg-shade cursor-pointer lg:mr-30 lg:w-362">
+    return (  <div className="flex rounded overflow-hidden flex-col xs:mb-6 w-full bg-shade cursor-pointer lg:mr-30 lg:w-362 text-text-dark hover:text-accent-gold">
     <Link to={`${routes.baseBlogDetails}${id}`}>
       <div className="xs:h-168 bg-shade-milk">
         {banner && (
@@ -17,8 +17,8 @@ const BlogCard = ({ title, banner, created_at, id }) => {
       </div>
     </Link>
     <Link to={`${routes.baseBlogDetails}${id}`}>
-      <div className="bg-shade xs:pt-28 xs:pb-8 flex flex-col items-center justify-center xs:px-6 lg:items-start">
-        <h6 className="xs:text-center lg:text-left font-sans font-semibold text-sm lg:text-lg  text-text-dark lg:px-0 tracking-open lg:leading-6">
+      <div className="bg-shade xs:pt-28 xs:pb-8 flex flex-col items-center justify-center xs:px-6 lg:items-start hover:text-accent-gold">
+        <h6 className="xs:text-center lg:text-left font-sans font-semibold text-sm lg:text-lg   lg:px-0 tracking-open lg:leading-6 hover:text-accent-gold">
           {title}
         </h6>
         <h6 className="xs:mt-4 font-sans font-normal text-xs lg:text-base text-text-dark tracking-open">

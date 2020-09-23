@@ -1,6 +1,7 @@
 import React from "react";
 import useQuery from "../HOC/useQuery";
 import aboutList from "./aboutData";
+import NoLogo from '../assets/icons/noLogo.svg';
 
 const AboutDetails = ({ fetchingAlliance, allianceList }) => {
   const { tab } = useQuery();
@@ -18,10 +19,10 @@ const AboutDetails = ({ fetchingAlliance, allianceList }) => {
                 <picture className="xs:mb-4 h-56 overflow-hidden">
                   <source
                     className="h-full"
-                    srcset={logo}
+                    srcset={logo || NoLogo}
                     media="(min-width: 600px)"
                   />
-                  <img className="h-full" src={logo} alt={name} />
+                  <img className="h-full" src={logo || NoLogo} alt={name} />
                 </picture>
                 <div className="font-sans text-sm tracking-open font-medium text-text-dark xs:text-center md:text-left">
                   <h6 className="xs:mb-4 last:mb-0 lg:mb-3 lg:last:mb-0">

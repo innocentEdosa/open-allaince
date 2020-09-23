@@ -12,7 +12,7 @@ const DocumentList = ({ fetchingDocuments, documents, downloadHandler }) => {
         <Skeleton count="3"/>
       </div>))}
 
-      <div className="xl:w-1146 mx-auto shadow-border">
+      <div className="xl:w-1146 mx-auto cursor-pointer topDocumentWrapper">
         <>
       {!fetchingDocuments && (
         <>

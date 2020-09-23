@@ -5,15 +5,13 @@ const PrimaryTextarea = ({
   rows,
   name,
   label,
-  maxLength,
   cols,
   value,
   onChange,
   onBlur,
   disabled,
-  showError,
+  required,
   placeholder,
-  error,
 }) => {
   const normalInput = 'xs:w-full rounded xs:px-6 xs:py-2 outline-none font-sans font-medium tracking-open border border-shade-placeholder placeholder-text-placeholder text-sm  h-20 ';
   return (
@@ -31,7 +29,7 @@ const PrimaryTextarea = ({
               name={name}
               placeholder={placeholder}
               cols={cols}
-
+                required={required}
               rows={rows}
               className={normalInput}
               value={value}
