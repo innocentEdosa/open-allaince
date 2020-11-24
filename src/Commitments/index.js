@@ -36,19 +36,16 @@ const CommitmentContainer = ({
   );
 };
 
-const mapStateToProps = ({thematic: {
-    fetchingThematicData: {
-        nap1: fetchingNap1,
-        nap2: fetchingNap2,
-    }, thematicData: {
-        nap1: thematicDataNap1,
-        nap2: thematicDataNap2,
-    }
-}}) => ({
-fetchingNap1,
-fetchingNap2,
-thematicDataNap1,
-thematicDataNap2,
+const mapStateToProps = ({
+  thematic: {
+    fetchingThematicData: { nap1: fetchingNap1, nap2: fetchingNap2 },
+    thematicData: { nap1: thematicDataNap1, nap2: thematicDataNap2 },
+  },
+}) => ({
+  fetchingNap1,
+  fetchingNap2,
+  thematicDataNap1,
+  thematicDataNap2,
 });
 
 const mapDispatchToProps = (dispatch) => ({

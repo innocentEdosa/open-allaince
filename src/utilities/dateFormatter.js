@@ -9,4 +9,12 @@ export const yearsDiff = (date) => {
     return dateDiff 
 }
 
+export const monthDiff = (date) => {
+    let past_date = new Date(date);
+    let current_date = new Date();
+    var diff =(current_date.getTime() - past_date.getTime()) / 1000;
+    diff /= (60 * 60 * 24 * 7 * 4);
+   return Math.abs(Math.round(diff));
+}
+
 export default formatDate;

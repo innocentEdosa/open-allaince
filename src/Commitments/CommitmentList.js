@@ -4,7 +4,7 @@ import { ReactComponent as MileStone } from "../assets/icons/milestone.svg";
 import { ReactComponent as Calendar } from "../assets/icons/calendar.svg";
 import routes from "../utilities/routes";
 import Skeleton from 'react-loading-skeleton';
-import { yearsDiff } from '../utilities/dateFormatter';
+import { yearsDiff, monthDiff } from '../utilities/dateFormatter';
 
 const List = ({
   nap,
@@ -18,41 +18,63 @@ const List = ({
       <h6 className="font-medium text-2xl font-sans tracking-open text-text-lemon mb-8 lg:text-4xl">
         {mainTitle}
       </h6>
-      {commitments.map(({ title, id, created_at }, innerIndex) => {
-        const list = (
-          <Link to={`/commitment/${nap}/${mainTitle}/${id}`}>
-            <div className="rounded-lg mb-6 p-28 cursor-pointer commitmentList">
-              <h6 className="font-bold text-sm font-sans text-text-dark lg:text-xl">
-                {`Commitment ${counter.current}`}
-              </h6>
-              <p className="my-3 font-semibold text-sm text-text-dark tracking-open font-sans lg:text-xl leading-5 lg:leading-8 ">
-                {title}
-              </p>
-              <div className="flex">
-                <div className="mr-4 flex items-center">
-                  <MileStone />
-                  <h6 className="ml-11 font-sans text-xs font-normal text-text-blm">
-                    <span className="font-bold">9</span> milestones
-                  </h6>
-                </div>
-                <div className="mr-4 flex items-center">
-                  <Calendar />{" "}
-                  <h6 className="ml-11 font-sans text-xs font-normal text-text-blm">
-        <span className="font-bold text">{yearsDiff(created_at)}</span> years ago
-                  </h6>
+      {commitments.map(
+        ({ title, id, start_date, number_of_milestones }, innerIndex) => {
+          const list = (
+            <Link to={`/commitment/${nap}/${mainTitle}/${id}`}>
+              <div className="rounded-lg mb-6 p-28 cursor-pointer commitmentList">
+                <h6 className="font-bold text-sm font-sans text-text-dark lg:text-xl">
+                  {`Commitment ${counter.current}`}
+                </h6>
+                <p className="my-3 font-semibold text-sm text-text-dark tracking-open font-sans lg:text-xl leading-5 lg:leading-8 ">
+                  {title}
+                </p>
+                <div className="flex">
+                  <div className="mr-4 flex items-center">
+                    <MileStone />
+                    <h6 className="ml-11 font-sans text-xs font-normal text-text-blm">
+                      <span className="font-bold">
+                        {number_of_milestones || 0}
+                      </span>{" "}
+                      milestones
+                    </h6>
+                  </div>
+                  <div className="mr-4 flex items-center">
+                    <Calendar />{" "}
+                    <h6 className="ml-11 font-sans text-xs font-normal text-text-blm">
+                      {!!yearsDiff(start_date) && (
+                        <span className="font-bold text">
+                          {`${yearsDiff(start_date)} ${
+                            yearsDiff(start_date) === 1
+                              ? "year ago"
+                              : "years ago"
+                          } `}{" "}
+                        </span>
+                      )}
+                      {!yearsDiff(start_date) && !!monthDiff(start_date) && (
+                        <span className="font-bold text">
+                          {`${monthDiff(start_date)} ${
+                            monthDiff(start_date) === 1
+                              ? "month ago"
+                              : "months ago"
+                          } `}{" "}
+                        </span>
+                      )}
+                    </h6>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        );
-        if (index === total && innerIndex === commitments.length - 1) {
-          counter.current = 1;
-        } else {
-          counter.current = counter.current + 1;
-        }
+            </Link>
+          );
+          if (index === total && innerIndex === commitments.length - 1) {
+            counter.current = 1;
+          } else {
+            counter.current = counter.current + 1;
+          }
 
-        return list;
-      })}
+          return list;
+        }
+      )}
     </div>
   );
 };

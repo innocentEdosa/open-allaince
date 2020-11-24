@@ -3,7 +3,6 @@ import PrimaryButton from "../Button/PrimaryButton";
 import FooterNav from './footerNav';
 import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg';
 import { ReactComponent as Twitter } from '../../assets/icons/twitter_footer.svg';
-import { ReactComponent as FordIcon } from '../../assets/icons/fords.svg';
 import { Link } from 'react-router-dom';
 import routes from '../../utilities/routes';
 import osiwa from '../../assets/osiwa.svg';
@@ -11,7 +10,6 @@ import partnersglobal from '../../assets/partnersglobal.svg';
 import fordfoundation from '../../assets/foundation.png';
 
 const Footer = () => {
-  const footerIcon = [<FordIcon />,<FordIcon />,<FordIcon/>];
 
   return (
     <div className="min-h-516  bg-shade-milk py-68">

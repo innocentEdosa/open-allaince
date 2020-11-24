@@ -3,6 +3,7 @@ import dateFormat from 'dateformat';
 import { Collapse } from "reactstrap";
 import { ReactComponent as DotIcon } from '../../assets/icons/Ellipse.svg';
 import { ReactComponent as ChevronDown } from '../../assets/icons/arrow-down(1).svg';
+import { ReactComponent as ChevronUp } from '../../assets/icons/chevronUp.svg';
 import Parser  from 'html-react-parser';
 
 const ThematicCard = ({
@@ -63,7 +64,7 @@ const ThematicCard = ({
                 <h6 className="mr-2 text-text-blue text-base font-semibold font-sans tracking-open">
                   MDAs
                 </h6>
-                <ChevronDown />
+               {!showMda ? <ChevronDown /> : <ChevronUp />}
               </button>
               <Collapse isOpen={showMda}>
                   <div className="mt-2">
