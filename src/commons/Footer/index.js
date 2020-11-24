@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import routes from '../../utilities/routes';
 import osiwa from '../../assets/osiwa.svg';
 import partnersglobal from '../../assets/partnersglobal.svg';
-import fordfoundation from '../../assets/fordfoundation.svg';
+import fordfoundation from '../../assets/foundation.png';
 
 const Footer = () => {
   const footerIcon = [<FordIcon />,<FordIcon />,<FordIcon/>];
